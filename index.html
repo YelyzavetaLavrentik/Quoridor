@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div id="points">
+  <div>Перший гравець:<div id="fpPoints">0</div></div>
+  <div>Другий гравець:<div id="spPoints">0</div></div>
+  <input type="button" id="resetСounter_btn" value="reset counter">
+</div>
+<div id="header">
+  <div> Поточний гравець: <img id="currentPlayer"
+                               src="https://cdn130.picsart.com/343302759059211.png?type=webp&to=min&r=640" width="30">
+  </div>
+  <div class="walls-parent">
+    <div class="walls">Лишилося стін у першого гравця<img src="https://cdn130.picsart.com/343302759059211.png?type=webp&to=min&r=640" width="15">:
+      <div id="firstPlayerWalls"></div>
+    </div>
+    <div class="walls">Лишилося стін у другого гравця<img
+      src="https://www.pngkit.com/png/full/184-1848773_danganronpa-v3-monokuma-sprite-1-danganronpa-monokuma.png"
+      width="15">:
+      <div id="secondPlayerWalls"></div>
+    </div>
+  </div>
+  <input type="button" id="restart_btn" value="restart">
+  <!--<form><input type="submit" value="restart" ></form>-->
+  <!--<form><input type="submit" value="Грати з II" ></form>
+  <form><input type="submit" value="Грати з другом" ></form>-->
+  <input type="button" id="playII_btn" value="Грати з II">
+  <input type="button" id="playFriend_btn" value="Грати з другом">
+  <!--<div id="playII">Грати з II</div>
+  <div id="playFriend">Грати з другом</div>-->
+</div>
+<div id="game-board"></div>
+
+
+<!-- Add your site or application content here -->
+<!-- <p>Hello world! This is HTML5 Boilerplate.</p>-->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+
+<canvas id="gameOver" width="200" height="200" style="border:1px solid     #c3c3c3;">
+
+</canvas>
+
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
